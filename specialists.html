@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Специалисты — ПрофДент (Ступино)</title>
+    <meta name="description" content="Врачи стоматологии «ПрофДент» в Ступино: терапевты, хирурги, ортопеды, ортодонты." />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Перейти к содержимому</a>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true"></span>
+          <span class="brand__text">
+            <span class="brand__name">ПрофДент</span>
+            <span class="brand__tag">Стоматология • Ступино</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Основное меню">
+          <a data-nav href="clinic.html">Клиника</a>
+          <a data-nav href="specialists.html">Специалисты</a>
+          <a data-nav href="equipment.html">Оборудование</a>
+          <a data-nav href="prices.html">Цены</a>
+          <a data-nav href="contacts.html">Контакты</a>
+          <a data-nav href="blog.html">Блог</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <button id="menuBtn" class="btn btn--ghost btn--sm menuBtn" aria-expanded="false" aria-controls="menuToast">Меню</button>
+          <a class="chip" href="tel:+74951066776">
+            +7 (495) 106-67-76
+            <small>Ступино</small>
+          </a>
+          <button class="btn btn--primary" data-open-appointment>Записаться</button>
+        </div>
+      </div>
+    </header>
+
+    <aside id="menuToast" class="toast" data-open="false" aria-label="Меню (мобильная версия)">
+      <div class="toast__row">
+        <div>
+          <h4>Навигация</h4>
+          <p>Быстрые ссылки по сайту.</p>
+          <div class="toast__actions" style="flex-wrap: wrap;">
+            <a class="btn btn--ghost btn--sm" href="clinic.html">Клиника</a>
+            <a class="btn btn--ghost btn--sm" href="specialists.html">Специалисты</a>
+            <a class="btn btn--ghost btn--sm" href="equipment.html">Оборудование</a>
+            <a class="btn btn--ghost btn--sm" href="prices.html">Цены</a>
+            <a class="btn btn--ghost btn--sm" href="contacts.html">Контакты</a>
+            <a class="btn btn--ghost btn--sm" href="blog.html">Блог</a>
+          </div>
+        </div>
+        <button class="xBtn" data-close-menu aria-label="Закрыть меню">×</button>
+      </div>
+    </aside>
+
+    <main id="content">
+      <section class="pageHead">
+        <div class="container">
+          <h1>Специалисты</h1>
+          <p>
+            Команда врачей, где каждый отвечает за своё направление. Ниже — примерная структура команды для сайта; имена и
+            регалии легко заменить на ваши реальные.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <h2 class="section__title">Врачи «ПрофДент»</h2>
+              <p class="section__hint">Профиль, специализация, сильные стороны — чтобы проще выбрать специалиста.</p>
+            </div>
+            <button class="btn btn--primary" data-open-appointment>Записаться</button>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card">
+              <div class="card__top">
+                <div class="icon" aria-hidden="true">Т</div>
+                <h3>Иванова Мария Сергеевна</h3>
+              </div>
+              <p><b>Врач-стоматолог терапевт</b></p>
+              <p class="muted" style="margin-top: 8px;">Лечение кариеса, реставрации, профилактика, ведение пациентов.</p>
+              <div class="pillRow">
+                <span class="pill">терапия</span>
+                <span class="pill">реставрации</span>
+                <span class="pill">профилактика</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <div class="icon" aria-hidden="true">Х</div>
+                <h3>Петров Алексей Андреевич</h3>
+              </div>
+              <p><b>Врач-стоматолог хирург, имплантолог</b></p>
+              <p class="muted" style="margin-top: 8px;">Удаления, имплантация, подготовка к протезированию.</p>
+              <div class="pillRow">
+                <span class="pill">хирургия</span>
+                <span class="pill">имплантация</span>
+                <span class="pill">планирование</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <div class="icon" aria-hidden="true">О</div>
+                <h3>Смирнова Елена Викторовна</h3>
+              </div>
+              <p><b>Врач-стоматолог ортопед</b></p>
+              <p class="muted" style="margin-top: 8px;">Коронки, вкладки, протезирование, восстановление функции.</p>
+              <div class="pillRow">
+                <span class="pill">ортопедия</span>
+                <span class="pill">эстетика</span>
+                <span class="pill">коронки</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <div class="icon" aria-hidden="true">ОР</div>
+                <h3>Кузнецова Анна Павловна</h3>
+              </div>
+              <p><b>Врач-стоматолог ортодонт</b></p>
+              <p class="muted" style="margin-top: 8px;">Брекеты, каппы, коррекция прикуса у подростков и взрослых.</p>
+              <div class="pillRow">
+                <span class="pill">ортодонтия</span>
+                <span class="pill">каппы</span>
+                <span class="pill">брекеты</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <div class="icon" aria-hidden="true">Д</div>
+                <h3>Орлова Наталья Игоревна</h3>
+              </div>
+              <p><b>Детский стоматолог</b></p>
+              <p class="muted" style="margin-top: 8px;">Адаптация, профилактика, лечение молочных зубов.</p>
+              <div class="pillRow">
+                <span class="pill">детская</span>
+                <span class="pill">адаптация</span>
+                <span class="pill">профилактика</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__top">
+                <div class="icon" aria-hidden="true">Г</div>
+                <h3>Фёдоров Дмитрий Олегович</h3>
+              </div>
+              <p><b>Врач-гигиенист</b></p>
+              <p class="muted" style="margin-top: 8px;">Профгигиена, обучение домашнему уходу, мотивация.</p>
+              <div class="pillRow">
+                <span class="pill">AirFlow</span>
+                <span class="pill">ультразвук</span>
+                <span class="pill">уход</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="cta">
+            <div>
+              <h3>Не знаете, к кому записаться?</h3>
+              <p>Оставьте заявку — администратор уточнит запрос и подберёт подходящего специалиста.</p>
+            </div>
+            <button class="btn btn--primary" data-open-appointment>Записаться</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div class="brand" style="padding: 0;">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span class="brand__text">
+              <span class="brand__name">ПрофДент</span>
+              <span class="brand__tag">Стоматология • Ступино</span>
+            </span>
+          </div>
+          <p class="muted" style="margin:10px 0 0; line-height:1.5;">
+            Современная стоматология с акцентом на точную диагностику, бережное лечение и прогнозируемый результат.
+          </p>
+        </div>
+        <div>
+          <h4>Клиника</h4>
+          <ul>
+            <li><a href="clinic.html">О клинике</a></li>
+            <li><a href="equipment.html">Оборудование</a></li>
+            <li><a href="specialists.html">Специалисты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Пациентам</h4>
+          <ul>
+            <li><a href="prices.html">Цены</a></li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ступино</h4>
+          <ul>
+            <li><a href="tel:+74951066776"><b>+7 (495) 106-67-76</b></a></li>
+            <li><span class="muted">пер. Приокский, д. 9</span></li>
+            <li><button class="btn btn--primary btn--sm" data-open-appointment>Записаться</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container fineprint">
+        <div>© 2026. «ПрофДент». Имеются противопоказания. Проконсультируйтесь со специалистом.</div>
+        <div>Подсказка: закрыть окна — <span class="kbd">Esc</span></div>
+      </div>
+    </footer>
+
+    <dialog id="appointmentDialog" aria-label="Запись на приём">
+      <div class="modal">
+        <div class="modal__head">
+          <div>
+            <h3>Записаться на приём</h3>
+            <p>Оставьте контакты — администратор перезвонит и подберёт удобное время в филиале Ступино.</p>
+          </div>
+          <button class="xBtn" data-close-dialog aria-label="Закрыть окно">×</button>
+        </div>
+
+        <form class="form">
+          <div class="fields">
+            <label>
+              Имя
+              <input name="name" autocomplete="name" placeholder="Например, Анна" required />
+            </label>
+            <label>
+              Телефон
+              <input name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required />
+            </label>
+          </div>
+
+          <div class="fields">
+            <label>
+              Направление
+              <select name="service">
+                <option value="therapy">Терапия</option>
+                <option value="hygiene">Профгигиена</option>
+                <option value="surgery">Хирургия</option>
+                <option value="implant">Имплантация</option>
+                <option value="ortho">Ортопедия</option>
+                <option value="ortodont">Ортодонтия</option>
+                <option value="kids">Детская стоматология</option>
+              </select>
+            </label>
+            <label>
+              Удобное время
+              <select name="time">
+                <option value="asap">Как можно скорее</option>
+                <option value="weekday_morning">Будни, утро</option>
+                <option value="weekday_evening">Будни, вечер</option>
+                <option value="weekend">Выходные</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Комментарий
+            <textarea name="comment" placeholder="Например: болит зуб / нужна консультация по имплантации"></textarea>
+          </label>
+
+          <div class="checkbox">
+            <input type="checkbox" required />
+            <div>Я согласен(а) на обработку персональных данных и ознакомлен(а) с политикой конфиденциальности.</div>
+          </div>
+
+          <div style="display:flex; gap:10px; justify-content:flex-end; flex-wrap:wrap;">
+            <button type="button" class="btn btn--ghost" data-close-dialog>Отмена</button>
+            <button type="submit" class="btn btn--primary">Отправить заявку</button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+
+    <aside id="toast" class="toast" data-open="false" aria-live="polite" aria-label="Уведомление">
+      <div class="toast__row">
+        <div>
+          <h4>Готово</h4>
+          <p id="toastText">Сообщение</p>
+          <div class="toast__actions">
+            <button class="btn btn--ghost btn--sm" data-close-toast>Закрыть</button>
+            <button class="btn btn--primary btn--sm" data-open-appointment>Записаться ещё</button>
+          </div>
+        </div>
+        <button class="xBtn" data-close-toast aria-label="Закрыть уведомление">×</button>
+      </div>
+    </aside>
+
+    <aside id="cookieToast" class="toast" data-open="false" aria-label="Cookies">
+      <div class="toast__row">
+        <div>
+          <h4>Мы используем cookies</h4>
+          <p>Это нужно для корректной работы сайта и улучшения сервиса.</p>
+          <div class="toast__actions">
+            <button class="btn btn--primary btn--sm" data-accept-cookies>Хорошо</button>
+          </div>
+        </div>
+        <div style="width:42px; height:42px;"></div>
+      </div>
+    </aside>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
+

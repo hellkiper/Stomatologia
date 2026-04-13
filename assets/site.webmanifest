@@ -1,0 +1,10 @@
+{
+  "name": "ПрофДент — стоматология (Ступино)",
+  "short_name": "ПрофДент",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "icons": []
+}
+

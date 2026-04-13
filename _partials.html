@@ -1,0 +1,197 @@
+<!--
+  Этот файл не используется напрямую браузером.
+  Он нужен только как единый эталон разметки для общих блоков (header/footer/dialog/toasts),
+  чтобы проще было поддерживать одинаковый формат на всех страницах.
+-->
+
+<!-- HEADER -->
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__text">
+        <span class="brand__name">ПрофДент</span>
+        <span class="brand__tag">Стоматология • Ступино</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Основное меню">
+      <a data-nav href="clinic.html">Клиника</a>
+      <a data-nav href="specialists.html">Специалисты</a>
+      <a data-nav href="equipment.html">Оборудование</a>
+      <a data-nav href="prices.html">Цены</a>
+      <a data-nav href="contacts.html">Контакты</a>
+      <a data-nav href="blog.html">Блог</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="menuBtn" class="btn btn--ghost btn--sm menuBtn" aria-expanded="false" aria-controls="menuToast">Меню</button>
+      <a class="chip" href="tel:+74951066776" aria-label="Позвонить в ПрофДент">
+        +7 (495) 106-67-76
+        <small>Ступино</small>
+      </a>
+      <button class="btn btn--primary" data-open-appointment>Записаться</button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU TOAST -->
+<aside id="menuToast" class="toast" data-open="false" aria-label="Меню (мобильная версия)">
+  <div class="toast__row">
+    <div>
+      <h4>Навигация</h4>
+      <p>Быстрые ссылки по сайту.</p>
+      <div class="toast__actions" style="flex-wrap: wrap;">
+        <a class="btn btn--ghost btn--sm" href="clinic.html">Клиника</a>
+        <a class="btn btn--ghost btn--sm" href="specialists.html">Специалисты</a>
+        <a class="btn btn--ghost btn--sm" href="equipment.html">Оборудование</a>
+        <a class="btn btn--ghost btn--sm" href="prices.html">Цены</a>
+        <a class="btn btn--ghost btn--sm" href="contacts.html">Контакты</a>
+        <a class="btn btn--ghost btn--sm" href="blog.html">Блог</a>
+      </div>
+    </div>
+    <button class="xBtn" data-close-menu aria-label="Закрыть меню">×</button>
+  </div>
+</aside>
+
+<!-- DIALOG -->
+<dialog id="appointmentDialog" aria-label="Запись на приём">
+  <div class="modal">
+    <div class="modal__head">
+      <div>
+        <h3>Записаться на приём</h3>
+        <p>Оставьте контакты — администратор перезвонит и подберёт удобное время в филиале Ступино.</p>
+      </div>
+      <button class="xBtn" data-close-dialog aria-label="Закрыть окно">×</button>
+    </div>
+
+    <form class="form">
+      <div class="fields">
+        <label>
+          Имя
+          <input name="name" autocomplete="name" placeholder="Например, Анна" required />
+        </label>
+        <label>
+          Телефон
+          <input name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" required />
+        </label>
+      </div>
+
+      <div class="fields">
+        <label>
+          Направление
+          <select name="service">
+            <option value="therapy">Терапия</option>
+            <option value="hygiene">Профгигиена</option>
+            <option value="surgery">Хирургия</option>
+            <option value="implant">Имплантация</option>
+            <option value="ortho">Ортопедия</option>
+            <option value="ortodont">Ортодонтия</option>
+            <option value="kids">Детская стоматология</option>
+          </select>
+        </label>
+        <label>
+          Удобное время
+          <select name="time">
+            <option value="asap">Как можно скорее</option>
+            <option value="weekday_morning">Будни, утро</option>
+            <option value="weekday_evening">Будни, вечер</option>
+            <option value="weekend">Выходные</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        Комментарий
+        <textarea name="comment" placeholder="Например: болит зуб / нужна консультация по имплантации"></textarea>
+      </label>
+
+      <div class="checkbox">
+        <input type="checkbox" required />
+        <div>
+          Я согласен(а) на обработку персональных данных и ознакомлен(а) с политикой конфиденциальности.
+        </div>
+      </div>
+
+      <div style="display:flex; gap:10px; justify-content:flex-end; flex-wrap:wrap;">
+        <button type="button" class="btn btn--ghost" data-close-dialog>Отмена</button>
+        <button type="submit" class="btn btn--primary">Отправить заявку</button>
+      </div>
+    </form>
+  </div>
+</dialog>
+
+<!-- TOASTS -->
+<aside id="toast" class="toast" data-open="false" aria-live="polite" aria-label="Уведомление">
+  <div class="toast__row">
+    <div>
+      <h4>Готово</h4>
+      <p id="toastText">Сообщение</p>
+      <div class="toast__actions">
+        <button class="btn btn--ghost btn--sm" data-close-toast>Закрыть</button>
+        <button class="btn btn--primary btn--sm" data-open-appointment>Записаться ещё</button>
+      </div>
+    </div>
+    <button class="xBtn" data-close-toast aria-label="Закрыть уведомление">×</button>
+  </div>
+</aside>
+
+<aside id="cookieToast" class="toast" data-open="false" aria-label="Cookies">
+  <div class="toast__row">
+    <div>
+      <h4>Мы используем cookies</h4>
+      <p>Это нужно для корректной работы сайта и улучшения сервиса.</p>
+      <div class="toast__actions">
+        <button class="btn btn--primary btn--sm" data-accept-cookies>Хорошо</button>
+      </div>
+    </div>
+    <div style="width:42px; height:42px;"></div>
+  </div>
+</aside>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <div class="brand" style="padding: 0;">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">
+          <span class="brand__name">ПрофДент</span>
+          <span class="brand__tag">Стоматология • Ступино</span>
+        </span>
+      </div>
+      <p class="muted" style="margin:10px 0 0; line-height:1.5;">
+        Современная стоматология с акцентом на точную диагностику, бережное лечение и прогнозируемый результат.
+      </p>
+    </div>
+    <div>
+      <h4>Клиника</h4>
+      <ul>
+        <li><a href="clinic.html">О клинике</a></li>
+        <li><a href="equipment.html">Оборудование</a></li>
+        <li><a href="specialists.html">Специалисты</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Пациентам</h4>
+      <ul>
+        <li><a href="prices.html">Цены</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Ступино</h4>
+      <ul>
+        <li><a href="tel:+74951066776"><b>+7 (495) 106-67-76</b></a></li>
+        <li><span class="muted">пер. Приокский, д. 9</span></li>
+        <li><button class="btn btn--primary btn--sm" data-open-appointment>Записаться</button></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container fineprint">
+    <div>© 2026. «ПрофДент». Имеются противопоказания. Проконсультируйтесь со специалистом.</div>
+    <div>Подсказка: закрыть окна — <span class="kbd">Esc</span></div>
+  </div>
+</footer>
+
