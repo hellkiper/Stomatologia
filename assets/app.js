@@ -95,17 +95,17 @@ function initDialog() {
         doctor,
         appointment,
         service,
-        time,
         comment,
       };
 
+      const body = new URLSearchParams(payload).toString();
       fetch(SHEETS_ENDPOINT, {
         method: "POST",
         mode: "no-cors",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         },
-        body: JSON.stringify(payload),
+        body,
       }).catch(() => {
         // Ошибку сети тихо игнорируем, чтобы пользователь видел единый сценарий.
       });
