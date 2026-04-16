@@ -55,6 +55,11 @@ function initDialog() {
   const toast = qs("#toast");
   const toastText = qs("#toastText");
 
+  // URL веб‑приложения Google Apps Script, который пишет в Google Sheets.
+  // ЗАМЕНИТЕ на свой URL вида:
+  // https://script.google.com/macros/s/XXXXXXXXXXXX/exec
+  const SHEETS_ENDPOINT = "https://script.google.com/macros/s/REPLACE_WITH_YOUR_ID/exec";
+
   function toastOpen(message) {
     if (!toast) return;
     toast.setAttribute("data-open", "true");
@@ -74,10 +79,32 @@ function initDialog() {
       e.preventDefault();
       const name = (qs('input[name="name"]', form)?.value || "").trim();
       const phone = (qs('input[name="phone"]', form)?.value || "").trim();
+      const service = qs('select[name="service"]', form)?.value || "";
+      const time = qs('select[name="time"]', form)?.value || "";
+      const comment = qs('textarea[name="comment"]', form)?.value || "";
       if (!name || !phone) {
         toastOpen("Пожалуйста, заполните имя и телефон.");
         return;
       }
+      const payload = {
+        name,
+        phone,
+        service,
+        time,
+        comment,
+      };
+
+      fetch(SHEETS_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      }).catch(() => {
+        // Ошибку сети тихо игнорируем, чтобы пользователь видел единый сценарий.
+      });
+
       close();
       form.reset();
       toastOpen("Заявка отправлена. Мы перезвоним в ближайшее время.");
