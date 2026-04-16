@@ -91,12 +91,33 @@
           </select>
         </label>
         <label>
-          Удобное время
-          <select name="time">
-            <option value="asap">Как можно скорее</option>
-            <option value="weekday_morning">Будни, утро</option>
-            <option value="weekday_evening">Будни, вечер</option>
-            <option value="weekend">Выходные</option>
+          Врач
+          <select name="doctor" required>
+            <option value="Черницкий">Черницкий</option>
+            <option value="Курилова">Курилова</option>
+            <option value="Воронина">Воронина</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="fields">
+        <label>
+          Дата
+          <input type="date" name="date" required />
+        </label>
+        <label>
+          Время
+          <select name="time" required>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
           </select>
         </label>
       </div>

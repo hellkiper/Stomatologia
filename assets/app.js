@@ -58,7 +58,7 @@ function initDialog() {
   // URL веб‑приложения Google Apps Script, который пишет в Google Sheets.
   // ЗАМЕНИТЕ на свой URL вида:
   // https://script.google.com/macros/s/XXXXXXXXXXXX/exec
-  const SHEETS_ENDPOINT = "https://script.google.com/macros/s/REPLACE_WITH_YOUR_ID/exec";
+  const SHEETS_ENDPOINT = "https://script.google.com/macros/library/d/1C4__sFMitGMPjdunQN77UaSLMuMkS9t-_E56N8odrcrlRuCjtgl6QxTY/1";
 
   function toastOpen(message) {
     if (!toast) return;
@@ -79,16 +79,21 @@ function initDialog() {
       e.preventDefault();
       const name = (qs('input[name="name"]', form)?.value || "").trim();
       const phone = (qs('input[name="phone"]', form)?.value || "").trim();
+      const doctor = (qs('select[name="doctor"]', form)?.value || "").trim();
+      const date = (qs('input[name="date"]', form)?.value || "").trim();
       const service = qs('select[name="service"]', form)?.value || "";
-      const time = qs('select[name="time"]', form)?.value || "";
+      const time = (qs('select[name="time"]', form)?.value || "").trim();
       const comment = qs('textarea[name="comment"]', form)?.value || "";
-      if (!name || !phone) {
-        toastOpen("Пожалуйста, заполните имя и телефон.");
+      if (!name || !phone || !doctor || !date || !time) {
+        toastOpen("Пожалуйста, заполните имя, телефон, врача и дату/время.");
         return;
       }
+      const appointment = `${date} ${time}`;
       const payload = {
         name,
         phone,
+        doctor,
+        appointment,
         service,
         time,
         comment,
